@@ -28,6 +28,8 @@ mix.styles([
     'resources/template/plugins/overlayScrollbars/css/OverlayScrollbars.min.css',
     'resources/template/plugins/daterangepicker/daterangepicker.css',
     'resources/template/plugins/summernote/summernote-bs4.min.css',
+    'resources/template/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css'
+
 ], 'public/css/all.css');
 
 mix.combine([
@@ -43,6 +45,7 @@ mix.combine([
     'resources/template/plugins/summernote/summernote-bs4.min.js',
     'resources/template/plugins/overlayScrollbars/js/jquery.overlayScrollbars.js',
     'resources/template/dist/js/adminlte.js',
+    'resources/template/plugins/sweetalert2/sweetalert2.min.js',
 ], 'public/js/all.js');
 
 mix.copy('resources/template/dist/img', 'public/img')

@@ -37,6 +37,7 @@
 
     <script src="{{asset('js/all.js')}}"></script>
     @stack('js')
+    @include('mensagem.alert-message')
 </body>
 
 </html>

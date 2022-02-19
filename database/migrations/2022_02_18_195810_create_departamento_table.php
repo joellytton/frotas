@@ -19,10 +19,12 @@ return new class extends Migration
             $table->enum('status', ['ativo', 'inativo']);
             $table->unsignedBigInteger('responsavel_id');
             $table->unsignedBigInteger('user_cadastro_id');
+            $table->unsignedBigInteger('user_alteracao_id')->nullable();
             $table->timestamps();
 
             $table->foreign('responsavel_id')->references('id')->on('users');
             $table->foreign('user_cadastro_id')->references('id')->on('users');
+            $table->foreign('user_alteracao_id')->references('id')->on('users');
         });
     }
 

@@ -21,9 +21,11 @@ class CreatePessoaFisicaTable extends Migration
             $table->date('data_nascimento');
             $table->enum('sexo', ['masculino', 'feminino']);
             $table->enum('status', ['ativo', 'inativo']);
+            $table->unsignedBigInteger('user_alteracao_id')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_alteracao_id')->references('id')->on('users');
         });
     }
 

@@ -18,8 +18,10 @@ return new class extends Migration
             $table->string('nome', 200);
             $table->enum('status', ['ativo', 'inativo']);
             $table->unsignedBigInteger('user_cadastro_id');
+            $table->unsignedBigInteger('user_alteracao_id')->nullable();
             $table->timestamps();
             $table->foreign('user_cadastro_id')->references('id')->on('users');
+            $table->foreign('user_alteracao_id')->references('id')->on('users');
         });
     }
 
