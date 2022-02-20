@@ -18,7 +18,7 @@ class CreateMotoristaTable extends Migration
             $table->string('nome', 250);
             $table->string('cpf', 13);
             $table->date('data_nascimento');
-            $table->integer('numero_registro');
+            $table->string('numero_registro', 11);
             $table->date('validade');
             $table->enum('status', ['ativo', 'inativo']);
             $table->unsignedBigInteger('user_cadastro_id');

@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Administracao\MotoristaController;
 use App\Http\Controllers\Administracao\VeiculoController;
+use App\Http\Controllers\AgendamentoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Administracao\CategoriaVeiculoController;
 
@@ -13,8 +15,10 @@ Route::middleware('auth')->group(function () {
         return view('dashboard');
     })->name('dashboard');
 
+    Route::resource('/agendamento', AgendamentoController::class);
     Route::resource('/categoriaVeiculo', CategoriaVeiculoController::class);
     Route::resource('/veiculo', VeiculoController::class);
+    Route::resource('/motorista', MotoristaController::class)->parameters(['motorista' => 'motorista']);
 
 });
 

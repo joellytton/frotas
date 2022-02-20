@@ -30,6 +30,12 @@ class CategoriaVeiculoRequest extends FormRequest
             'status' => 'ativo',
             'user_cadastro_id' => auth()->user()->id,
         ]);
+
+        if ($this->method() == 'PUT') {
+            $this->merge([
+                'user_alteracao_id' => auth()->user()->id,
+            ]);
+        }
     }
 
     /**

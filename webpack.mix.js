@@ -44,8 +44,10 @@ mix.combine([
     'resources/template/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js',
     'resources/template/plugins/summernote/summernote-bs4.min.js',
     'resources/template/plugins/overlayScrollbars/js/jquery.overlayScrollbars.js',
-    'resources/template/dist/js/adminlte.js',
     'resources/template/plugins/sweetalert2/sweetalert2.min.js',
+    'resources/template/plugins/moment/moment.min.js',
+    'resources/template/plugins/inputmask/jquery.inputmask.min.js',
+    'resources/template/dist/js/adminlte.js',
 ], 'public/js/all.js');
 
 mix.copy('resources/template/dist/img', 'public/img')
