@@ -58,7 +58,7 @@
                                     @forelse($agendamentos as $agendamento)
                                     @empty
                                         <tr>
-                                            <td colspan="8" class="text-center">Nenhum agendamento encontrado</td>
+                                            <td colspan="9" class="text-center">Nenhum agendamento encontrado</td>
                                         </tr>
                                     @endforelse
                                 </tbody>

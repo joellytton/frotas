@@ -58,7 +58,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($veiculos as $veiculo)
+                                @forelse($veiculos as $veiculo)
                                     <tr>
                                         <td>{{$veiculo->id}}</td>
                                         <td class="text-center">{{$veiculo->marca}}</td>
@@ -87,7 +87,11 @@
                                             </form>
                                         </td>
                                     </tr>
-                                @endforeach
+                                @empty
+                                    <tr>
+                                        <td colspan="12" class="text-center">Nenhum veiculo encontrado</td>
+                                    </tr>
+                                @endforelse
                                 </tbody>
                             </table>
                         </div>

@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('departamento_id');
-            $table->date('data_saida');
-            $table->time('hora_saida');
+            $table->timestamp('data_saida');
+            $table->timestamp('data_retorno')->nullable();
             $table->string('origem', '250');
             $table->string('destino', '250');
             $table->unsignedBigInteger('veiculo_id')->nullable();
