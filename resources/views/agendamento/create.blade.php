@@ -13,7 +13,7 @@
                         <li class="breadcrumb-item">
                             <a href="{{route('agendamento.index')}}">Lista de agendamentos</a>
                         </li>
-                        <li class="breadcrumb-item active">Cadastrado agendamento</li>
+                        <li class="breadcrumb-item active">Cadastrar agendamento</li>
                     </ol>
                 </div>
             </div>
